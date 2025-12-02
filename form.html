@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get $2 Bonus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            width: 90%;
+            max-width: 450px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 12px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #43a047;
+        }
+        .success {
+            text-align: center;
+            font-size: 18px;
+            color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
 
+<div class="container">
+    <h2>Fill out the form and get $2</h2>
+
+    <form action="send.php" method="POST">
+
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Age</label>
+        <input type="number" name="age" required>
+
+        <label>Country of Residence</label>
+        <input type="text" name="country" required>
+
+        <label>What languages do you speak?</label>
+        <input type="text" name="languages" required>
+
+        <label>Your profession</label>
+        <input type="text" name="profession" required>
+
+        <label>Communication method</label>
+        <select name="method" required>
+            <option value="Telegram">Telegram (@username)</option>
+            <option value="WhatsApp">WhatsApp (phone number)</option>
+            <option value="Instagram">Instagram (@username)</option>
+            <option value="Facebook">Facebook (@username)</option>
+        </select>
+
+        <label>Your contact info</label>
+        <input type="text" name="contact" placeholder="@username or phone number" required>
+
+        <button type="submit">Send</button>
+    </form>
+</div>
+
+</body>
+</html>
