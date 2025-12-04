@@ -1,1 +1,229 @@
+/* GENERAL */
 
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #14c2e2, #9c4df4, #ff5ec9);
+    background-attachment: fixed;
+    color: white;
+}
+
+/* LOGO */
+
+.logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.logo img {
+    width: 65px;
+    opacity: 0.9;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+/* PRELOADER */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,#14c2e2,#9c4df4,#ff5ec9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: 0.5s;
+}
+
+.loader {
+    text-align: center;
+}
+
+.loader p {
+    color: white;
+    font-size: 22px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.coin-spin {
+    width: 80px;
+    animation: spinCoin 1s linear infinite;
+}
+
+@keyframes spinCoin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+/* FLOATING COINS */
+
+.coins {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.coins::before,
+.coins::after {
+    content: "💰";
+    position: absolute;
+    font-size: 40px;
+    opacity: 0.6;
+    animation: fall 6s linear infinite;
+}
+
+.coins::before {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.coins::after {
+    left: 70%;
+    animation-delay: 2s;
+}
+
+@keyframes fall {
+    0% { top: -10%; transform: rotate(0deg); }
+    100% { top: 110%; transform: rotate(360deg); }
+}
+
+/* HERO BLOCK */
+
+.hero {
+    text-align: center;
+    padding: 120px 20px 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: auto;
+    opacity: 0.9;
+}
+
+.bonus {
+    color: #ffe05c;
+    font-weight: 800;
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 25px;
+    background: #00e6b8;
+    color: #000;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+/* TASKS */
+
+.tasks {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.tasks h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.task-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.task-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    backdrop-filter: blur(6px);
+}
+
+/* REVIEWS */
+
+.reviews {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.review {
+    background: rgba(0,0,0,0.25);
+    padding: 25px;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+.review span {
+    display: block;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+/* FORM */
+
+.form-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.lead-form {
+    max-width: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lead-form input,
+.lead-form select {
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.7;
+}
