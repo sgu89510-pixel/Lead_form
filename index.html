@@ -3,99 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get $2 Bonus</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background: #fff;
-            width: 90%;
-            max-width: 450px;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        label {
-            font-weight: bold;
-            display: block;
-            margin-top: 12px;
-        }
-        input, select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 6px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 15px;
-        }
-        button {
-            width: 100%;
-            padding: 12px;
-            margin-top: 20px;
-            background: #4CAF50;
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            font-size: 17px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #43a047;
-        }
-        .success {
-            text-align: center;
-            font-size: 18px;
-            color: #2e7d32;
-        }
-    </style>
+    <title>Earn Extra Income — Get $3 Bonus</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Beautiful modern font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="container">
-    <h2>Fill out the form and get $2</h2>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader">
+            <img src="https://i.imgur.com/rYkQX9H.png" class="coin-spin">
+            <p>Loading...</p>
+        </div>
+    </div>
 
-    <form action="send.php" method="POST">
+    <!-- FLOATING COINS -->
+    <div class="coins"></div>
 
-        <label>Name</label>
-        <input type="text" name="name" required>
+    <!-- LOGO -->
+    <div class="logo">
+        <img src="https://i.imgur.com/pYQnYH9.png">
+    </div>
 
-        <label>Age</label>
-        <input type="number" name="age" required>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Would you like to get extra income?</h1>
+        <p>Earn $30–50 per hour completing simple online tasks.  
+        New members receive <span class="bonus">$3 instantly</span> after registration!</p>
+        <a href="#form" class="btn-primary">Apply Now</a>
+    </section>
 
-        <label>Country of Residence</label>
-        <input type="text" name="country" required>
+    <!-- TASKS BLOCK -->
+    <section class="tasks">
+        <h2>What will you do?</h2>
+        <div class="task-grid">
+            <div class="task-card">✔ Write reviews & comments</div>
+            <div class="task-card">✔ Watch short videos</div>
+            <div class="task-card">✔ Complete simple tasks</div>
+            <div class="task-card">✔ Take part in social surveys</div>
+            <div class="task-card">✔ Evaluate companies' performance</div>
+        </div>
+    </section>
 
-        <label>What languages do you speak?</label>
-        <input type="text" name="languages" required>
+    <!-- REVIEWS -->
+    <section class="reviews">
+        <h2>What people say</h2>
+        <div class="review-grid">
+            <div class="review">
+                “Amazing service! I earned my first $40 the same day🔥”
+                <span>- Anna, 22</span>
+            </div>
+            <div class="review">
+                “Tasks are easy, just comments and likes. Perfect for free time.”
+                <span>- Mark, 19</span>
+            </div>
+            <div class="review">
+                “Got my $3 instantly after submitting the form!”
+                <span>- Sophia, 25</span>
+            </div>
+        </div>
+    </section>
 
-        <label>Your profession</label>
-        <input type="text" name="profession" required>
+    <!-- FORM -->
+    <section class="form-section" id="form">
+        <h2>Get $3 instantly — apply now</h2>
+        <p>Fill out a short form and your personal manager will contact you shortly.</p>
 
-        <label>Communication method</label>
-        <select name="method" required>
-            <option value="Telegram">Telegram (@username)</option>
-            <option value="WhatsApp">WhatsApp (phone number)</option>
-            <option value="Instagram">Instagram (@username)</option>
-            <option value="Facebook">Facebook (@username)</option>
-        </select>
+        <form action="send.php" method="POST" class="lead-form">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="number" name="age" placeholder="Your age" required>
+            <input type="text" name="country" placeholder="Country" required>
+            <input type="text" name="languages" placeholder="Languages you speak" required>
+            <input type="text" name="profession" placeholder="Your profession" required>
 
-        <label>Your contact info</label>
-        <input type="text" name="contact" placeholder="@username or phone number" required>
+            <select name="method" required>
+                <option value="" disabled selected>Preferred contact method</option>
+                <option value="Telegram">Telegram</option>
+                <option value="WhatsApp">WhatsApp</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Email">Email</option>
+            </select>
 
-        <button type="submit">Send</button>
-    </form>
-</div>
+            <input type="text" name="contact" placeholder="Your contact (@username / phone / email)" required>
+
+            <button type="submit" class="btn-primary">Submit Application</button>
+        </form>
+    </section>
+
+    <footer>
+        © 2025 Extra Income Program — All rights reserved
+    </footer>
+
+    <!-- PRELOADER SCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                document.getElementById("preloader").style.opacity = "0";
+                setTimeout(() => {
+                    document.getElementById("preloader").style.display = "none";
+                }, 500);
+            }, 800);
+        });
+    </script>
 
 </body>
 </html>
