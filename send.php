@@ -1,8 +1,8 @@
 <?php
 
 // Получаем токен и chat_id из переменных окружения Render
-$token = getenv("8557269164:AAGvbJriNETY6zD4uTCWQ0ApzsWwsPPElw8");
-$chat_id = getenv("8199279516");
+$token = getenv("TELEGRAM_TOKEN");
+$chat_id = getenv("TELEGRAM_CHAT_ID");
 
 // Получение данных формы
 $name       = $_POST['name'];
